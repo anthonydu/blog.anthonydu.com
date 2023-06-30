@@ -1,16 +1,162 @@
 ---
-title: My Post 2
-author: 'Anthony Du'
+title: markdown-sample.md
+author: 'rt2zz'
 ---
 
-# My Post 2
+An h1 header
+============
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Habitasse platea dictumst vestibulum rhoncus est. Sem fringilla ut morbi tincidunt augue interdum velit euismod in. Sit amet venenatis urna cursus eget nunc scelerisque viverra. Scelerisque fermentum dui faucibus in. Netus et malesuada fames ac turpis egestas integer. Scelerisque viverra mauris in aliquam sem fringilla ut morbi. At consectetur lorem donec massa. Laoreet sit amet cursus sit. Arcu felis bibendum ut tristique. Ultrices eros in cursus turpis massa tincidunt dui ut. Lectus vestibulum mattis ullamcorper velit. Urna cursus eget nunc scelerisque viverra mauris. Euismod elementum nisi quis eleifend quam adipiscing vitae proin sagittis. Velit ut tortor pretium viverra suspendisse.
+Paragraphs are separated by a blank line.
 
-Sed nisi lacus sed viverra tellus in hac habitasse platea. Tempor orci eu lobortis elementum nibh tellus molestie nunc non. Diam sollicitudin tempor id eu nisl nunc mi ipsum faucibus. Aliquam vestibulum morbi blandit cursus risus at. Est pellentesque elit ullamcorper dignissim cras. Lobortis elementum nibh tellus molestie. Fermentum et sollicitudin ac orci phasellus egestas. Dui nunc mattis enim ut tellus elementum sagittis. Purus non enim praesent elementum facilisis. Blandit volutpat maecenas volutpat blandit aliquam etiam erat velit. Felis bibendum ut tristique et egestas. Eget magna fermentum iaculis eu non diam phasellus. Ligula ullamcorper malesuada proin libero nunc. Condimentum id venenatis a condimentum vitae sapien pellentesque. Justo laoreet sit amet cursus sit. Et netus et malesuada fames ac turpis egestas integer eget. Viverra orci sagittis eu volutpat odio facilisis mauris.
+2nd paragraph. *Italic*, **bold**, and `monospace`. Itemized lists
+look like:
 
-Scelerisque varius morbi enim nunc. Viverra orci sagittis eu volutpat. Eleifend quam adipiscing vitae proin sagittis nisl rhoncus mattis rhoncus. Convallis posuere morbi leo urna molestie at elementum eu facilisis. Quam quisque id diam vel quam elementum pulvinar etiam non. Rhoncus urna neque viverra justo nec ultrices. Dui id ornare arcu odio ut sem nulla. Non pulvinar neque laoreet suspendisse. In ante metus dictum at tempor commodo ullamcorper a. In hendrerit gravida rutrum quisque non. Non quam lacus suspendisse faucibus interdum posuere. Interdum consectetur libero id faucibus nisl tincidunt eget.
+  * this one
+  * that one
+  * the other one
 
-Egestas dui id ornare arcu odio. Ut consequat semper viverra nam. Mauris nunc congue nisi vitae suscipit tellus mauris. Risus feugiat in ante metus. Netus et malesuada fames ac. Id diam vel quam elementum. Quis enim lobortis scelerisque fermentum dui faucibus in. Elementum integer enim neque volutpat ac tincidunt vitae. Sapien faucibus et molestie ac feugiat sed. Pretium aenean pharetra magna ac placerat vestibulum lectus. Amet nulla facilisi morbi tempus iaculis urna. Purus sit amet volutpat consequat mauris. Netus et malesuada fames ac turpis egestas sed tempus urna. Pharetra sit amet aliquam id.
+Note that --- not considering the asterisk --- the actual text
+content starts at 4-columns in.
 
-Nisi lacus sed viverra tellus in hac habitasse platea. Phasellus vestibulum lorem sed risus ultricies. Sit amet volutpat consequat mauris nunc congue. Morbi tristique senectus et netus et malesuada. Egestas pretium aenean pharetra magna ac placerat vestibulum lectus. Vulputate sapien nec sagittis aliquam malesuada. Natoque penatibus et magnis dis. Commodo odio aenean sed adipiscing. Senectus et netus et malesuada fames ac. Odio euismod lacinia at quis risus sed vulputate odio ut. Elementum facilisis leo vel fringilla est. Purus gravida quis blandit turpis cursus in hac habitasse platea. Dignissim cras tincidunt lobortis feugiat vivamus at. Consequat mauris nunc congue nisi vitae suscipit tellus. Pulvinar sapien et ligula ullamcorper malesuada proin libero nunc consequat. Diam volutpat commodo sed egestas egestas fringilla. Tincidunt vitae semper quis lectus. Nec ultrices dui sapien eget mi proin.
+> Block quotes are
+> written like so.
+>
+> They can span multiple paragraphs,
+> if you like.
+
+Use 3 dashes for an em-dash. Use 2 dashes for ranges (ex., "it's all
+in chapters 12--14"). Three dots ... will be converted to an ellipsis.
+Unicode is supported. ☺
+
+
+
+An h2 header
+------------
+
+Here's a numbered list:
+
+ 1. first item
+ 2. second item
+ 3. third item
+
+Note again how the actual text starts at 4 columns in (4 characters
+from the left side). Here's a code sample:
+
+    # Let me re-iterate ...
+    for i in 1 .. 10 { do-something(i) }
+
+As you probably guessed, indented 4 spaces. By the way, instead of
+indenting the block, you can use delimited blocks, if you like:
+
+~~~
+define foobar() {
+    print "Welcome to flavor country!";
+}
+~~~
+
+(which makes copying & pasting easier). You can optionally mark the
+delimited block for Pandoc to syntax highlight it:
+
+~~~python
+import time
+# Quick, count to ten!
+for i in range(10):
+    # (but not *too* quick)
+    time.sleep(0.5)
+    print i
+~~~
+
+
+
+### An h3 header ###
+
+Now a nested list:
+
+ 1. First, get these ingredients:
+
+      * carrots
+      * celery
+      * lentils
+
+ 2. Boil some water.
+
+ 3. Dump everything in the pot and follow
+    this algorithm:
+
+        find wooden spoon
+        uncover pot
+        stir
+        cover pot
+        balance wooden spoon precariously on pot handle
+        wait 10 minutes
+        goto first step (or shut off burner when done)
+
+    Do not bump wooden spoon or it will fall.
+
+Notice again how text always lines up on 4-space indents (including
+that last line which continues item 3 above).
+
+Here's a link to [a website](http://foo.bar), to a [local
+doc](local-doc.html), and to a [section heading in the current
+doc](#an-h2-header). Here's a footnote [^1].
+
+[^1]: Footnote text goes here.
+
+Tables can look like this:
+
+size  material      color
+----  ------------  ------------
+9     leather       brown
+10    hemp canvas   natural
+11    glass         transparent
+
+Table: Shoes, their sizes, and what they're made of
+
+(The above is the caption for the table.) Pandoc also supports
+multi-line tables:
+
+--------  -----------------------
+keyword   text
+--------  -----------------------
+red       Sunsets, apples, and
+          other red or reddish
+          things.
+
+green     Leaves, grass, frogs
+          and other things it's
+          not easy being.
+--------  -----------------------
+
+A horizontal rule follows.
+
+***
+
+Here's a definition list:
+
+apples
+  : Good for making applesauce.
+oranges
+  : Citrus!
+tomatoes
+  : There's no "e" in tomatoe.
+
+Again, text is indented 4 spaces. (Put a blank line between each
+term/definition pair to spread things out more.)
+
+Here's a "line block":
+
+| Line one
+|   Line too
+| Line tree
+
+and images can be specified like so:
+
+![example image](example-image.jpg "An exemplary image")
+
+Inline math equations go in like so: $\omega = d\phi / dt$. Display
+math should get its own line and be put in in double-dollarsigns:
+
+$$I = \int \rho R^{2} dV$$
+
+And note that you can backslash-escape any punctuation characters
+which you wish to be displayed literally, ex.: \`foo\`, \*bar\*, etc.
