@@ -1,10 +1,13 @@
-import fs from 'fs';
 import matter from "gray-matter";
-import ReactMarkdown from "react-markdown";
+import ReactMarkdown from "react-markdown"; 
+import { server } from '../../../config';
 
-export default function Page({ params }: {params: { slug: string}}) {
-  const content = fs.readFileSync(`public/posts/${params.slug}.md`, 'utf8');
-  const { data: frontmatter, content: markdownBody } = matter(content);
+export const runtime = 'edge';
+
+export default async function Page({ params }: { params: { slug: string }}) {
+  const res = await fetch(server + "/posts/" + params.slug + ".md");
+  const data = await Promise.resolve(res.text());
+  const { content: markdownBody } = matter(data);
 
   return (
     <ReactMarkdown className="markdown">{markdownBody}</ReactMarkdown>
