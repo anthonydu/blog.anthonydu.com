@@ -19,7 +19,7 @@ export default function Home() {
       <ul className="absolute left-1/4">
         {
           posts.map(post => (
-            <li className="my-5 transition duration-500 hover:translate-x-2.5">
+            <li key={post.slug} className="my-5 transition duration-500 hover:translate-x-2.5">
               <Link href={post.slug}>
                 {post.frontmatter.title}
               </Link>
