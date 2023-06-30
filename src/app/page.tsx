@@ -2,8 +2,6 @@ import fs from 'fs';
 import matter from 'gray-matter';
 import Link from 'next/link';
 
-export const runtime = 'edge';
-
 export default function Home() {
   const posts = fs.readdirSync('public/posts').map(post => {
     const slug = post.replace('.md', '');

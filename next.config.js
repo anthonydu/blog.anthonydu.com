@@ -8,9 +8,9 @@ module.exports = {
     })
     return config
   },
-  webpack: (config) => {
-    config.resolve.fallback = { fs: false };
-
-    return config;
+  experimental: {
+    runtime: 'experimental-edge',
   },
+  reactStrictMode: true,
+  swcMinify: true,
 }
