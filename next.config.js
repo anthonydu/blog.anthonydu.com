@@ -8,4 +8,9 @@ module.exports = {
     })
     return config
   },
+  webpack: (config) => {
+    config.resolve.fallback = { fs: false };
+
+    return config;
+  },
 }
