@@ -1,8 +1,33 @@
 import matter from "gray-matter";
 import ReactMarkdown from "react-markdown"; 
 import { server } from '../../../config';
+import remarkGfm from 'remark-gfm';
+import rehypeRaw from 'rehype-raw';
 
 export const runtime = 'edge';
+
+export async function generateMetadata({ params }: { params: { slug: string }}) {
+  const res = await fetch(server + "/posts/" + params.slug + ".md");
+  const data = await Promise.resolve(res.text());
+  const { data: frontmatter } = matter(data);
+  
+  return {
+    title: frontmatter.title + " | Anthony Du's Blog",
+    description: frontmatter.description,
+    authors: { name: frontmatter.author },
+    openGraph: {
+      title: frontmatter.title,
+      description: frontmatter.description,
+      url: "https://blog.anthonydu.com/" + params.slug,
+      siteName: "Anthony Du's Blog",
+      locale: "en_US",
+      type: "article",
+    },
+    alternatives: {
+      canonical: "https://blog.anthonydu.com/" + params.slug,
+    },
+  }
+}
 
 export default async function Page({ params }: { params: { slug: string }}) {
   const res = await fetch(server + "/posts/" + params.slug + ".md");
@@ -10,6 +35,6 @@ export default async function Page({ params }: { params: { slug: string }}) {
   const { content: markdownBody } = matter(data);
 
   return (
-    <ReactMarkdown className="markdown">{markdownBody}</ReactMarkdown>
+    <ReactMarkdown className="markdown" remarkPlugins={[ remarkGfm ]} rehypePlugins={[ rehypeRaw ]}>{markdownBody}</ReactMarkdown>
   )
 }

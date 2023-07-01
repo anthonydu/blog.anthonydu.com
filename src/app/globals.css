@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --slate-700: #334155;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -9,10 +13,30 @@
 }
 
 html, body {
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
 }
 
-.markdown > * {
+.markdown * {
   all: revert;
+}
+
+.markdown h1 {
+  padding-bottom: 8px;
+  border-bottom: var(--slate-700) 1px solid;
+}
+
+.markdown a {
+  color: #3182ce;
+  text-decoration: none;
+}
+
+.markdown code {
+  white-space : pre-wrap;
+}
+
+.markdown pre:has(code) {
+  padding: 10px;
+  border: var(--slate-700) 1px solid;
+  border-radius: 10px;
 }

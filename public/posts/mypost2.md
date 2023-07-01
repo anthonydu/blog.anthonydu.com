@@ -1,6 +1,8 @@
 ---
-title: markdown-sample.md
+title: |
+    Sample File: markdown-sample.md
 author: 'rt2zz'
+description: "An article named markdown-sample.md"
 ---
 
 An h1 header

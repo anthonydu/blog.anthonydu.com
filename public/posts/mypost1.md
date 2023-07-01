@@ -1,6 +1,8 @@
 ---
-title: Full-Markdown.md
+title: |
+    Sample File: Full-Markdown.md
 author: 'allysonsilva'
+description: "An article named Full-Markdown.md"
 ---
 
 # Headers

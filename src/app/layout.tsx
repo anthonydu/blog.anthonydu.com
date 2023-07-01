@@ -4,8 +4,18 @@ import { Inter } from 'next/font/google';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
-  title: 'Anthony Du\'s Blog',
-  description: 'This is Anthony Du\'s blog.',
+  themeColor: "#1E293B",
+  icons: {
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/favicon-16x16.png" },
+      { url: "/favicon-32x32.png" },
+      { url: "android-chrome-192x192.png" },
+      { url: "android-chrome-512x512.png" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
 }
 
 export default function RootLayout({
