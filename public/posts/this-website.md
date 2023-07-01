@@ -8,7 +8,7 @@ pinned: true
 
 # The Technology Behind This Website and Some Thoughts
 
-This website was bootstrapped with create-next-app with the TypeScript template. There are a lot of changes that came with version 13 of Next.js, so it took me a while to figure every new thing out since there aren't enough resources online yet. Although big changes in technologies are always hard, but from what I have seen so far of Next.js 13, I think they are definitely heading in the right direction. I have to say, new App Router is much more easier to use than what came with the older versions. I'm sure if they flesh things out it would be even better.
+This website was bootstrapped with create-next-app with the TypeScript template. There are a lot of changes that came with version 13 of Next.js, so it took me a while to figure every new thing out since there aren't enough resources online yet. Although big changes in technologies are always hard, from what I have seen so far of Next.js 13, I think they are definitely heading in the right direction. I have to say, new App Router is somewhat more easier to use than what came with the older versions. I'm sure if they flesh things out it would be even better.
 
 Gray-matter and react-markdown was used to parse and render markdown files stored at public/posts. 
 
