@@ -30,10 +30,11 @@ export default function RootLayout({
           var sc_security=`a85b9a10`; 
         </script>
         <script type="text/javascript" src="https://www.statcounter.com/counter/counter.js"async></script>
-        <noscript><div className="statcounter"><a title="Web Analytics" href="https://statcounter.com/" target="_blank">
-          <img className="statcounter" src="https://c.statcounter.com/12896567/0/a85b9a10/1/" alt="Web Analytics" referrerPolicy="no-referrer-when-downgrade"/>
-        </a></div></noscript>
         {/* End of Statcounter Code */}
+
+        <script async data-id="101416538" src="//static.getclicky.com/js"></script>
+        <script data-goatcounter="https://anthonydu.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+        <script defer src="https://service.watchthem.live/pixel/ssaLU3aUddUUaaUa"></script>
       </body>
     </html>
   )
