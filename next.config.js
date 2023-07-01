@@ -8,9 +8,4 @@ module.exports = {
     })
     return config
   },
-  experimental: {
-    runtime: 'experimental-edge',
-  },
-  reactStrictMode: true,
-  swcMinify: true,
 }
