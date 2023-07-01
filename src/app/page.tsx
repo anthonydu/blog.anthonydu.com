@@ -29,7 +29,7 @@ export default function Home() {
   });
 
   return (
-    <nav className="fixed inset-0 flex justify-center items-center font-bold text-3xl overflow-hidden">
+    <nav className="font-bold text-3xl">
       <ul className="absolute left-1/4 mr-12">
         {
           posts.map(post => {
