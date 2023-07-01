@@ -5,18 +5,7 @@ import Link from 'next/link';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
-  themeColor: "#1E293B",
-  icons: {
-    icon: [
-      { url: "/favicon.ico" },
-      { url: "/favicon-16x16.png" },
-      { url: "/favicon-32x32.png" },
-      { url: "android-chrome-192x192.png" },
-      { url: "android-chrome-512x512.png" },
-    ],
-    shortcut: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
-  },
+  themeColor: "#1E293B"
 }
 
 export default function RootLayout({

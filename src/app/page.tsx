@@ -3,10 +3,10 @@ import matter from 'gray-matter';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Anthony Du\'s Blog',
+  title: 'Home | Anthony Du\'s Blog',
   description: 'A blog about Anthony Du\'s life and thoughts.',
   openGraph: {
-    title: 'Anthony Du\'s Blog',
+    title: 'Home | Anthony Du\'s Blog',
     description: 'A blog about Anthony Du\'s life and thoughts.',
     url: "https://blog.anthonydu.com",
     siteName: "Anthony Du's Blog",
