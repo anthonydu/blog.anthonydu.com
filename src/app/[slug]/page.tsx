@@ -1,6 +1,7 @@
+import "./styles.scss";
 import matter from "gray-matter";
 import ReactMarkdown from "react-markdown"; 
-import { server } from '../../../config';
+import { server } from "@/app/_config";
 import remarkGfm from 'remark-gfm';
 import rehypeRaw from 'rehype-raw';
 
@@ -35,6 +36,6 @@ export default async function Page({ params }: { params: { slug: string }}) {
   const { content: markdownBody } = matter(data);
 
   return (
-    <ReactMarkdown className="markdown" remarkPlugins={[ remarkGfm ]} rehypePlugins={[ rehypeRaw ]}>{markdownBody}</ReactMarkdown>
+    <ReactMarkdown className="markdown py-8" remarkPlugins={[ remarkGfm ]} rehypePlugins={[ rehypeRaw ]}>{markdownBody}</ReactMarkdown>
   )
 }

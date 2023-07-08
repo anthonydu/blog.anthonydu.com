@@ -1,6 +1,7 @@
 ---
 title: Portal to My Other Websites!
-author: 'Anthony Du'
+author: Anthony Du
+date: "2023-07-01"
 pinned: true
 ---
 

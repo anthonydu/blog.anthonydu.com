@@ -3,7 +3,7 @@ import matter from 'gray-matter';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Home',
+  title: "Home | Anthony Du's Blog",
   description: 'A blog about Anthony Du\'s life and thoughts.',
   openGraph: {
     title: 'Home',
@@ -29,35 +29,32 @@ export default function Home() {
     });
 
   return (
-    <main className="absolute left-1/4 my-48 container max-w-3xl">
-      <nav className="font-bold text-3xl">
-        <ul>
-          { // pinned
-            posts.map(post => {
-              return post.frontmatter.pinned ? (
-              <li key={post.slug} className="my-5 transition duration-500 hover:translate-x-2.5">
-                <div className='h-0 w-0 relative -left-12'>📌</div>
-                <Link href={post.slug}>
-                  {post.frontmatter.title}
-                </Link>
-              </li>
-              ) : null;
-            })
-          }
-          { // unpinned
-            posts.map(post => {
-              return post.frontmatter.pinned ? null :(
-              <li key={post.slug} className="my-5 transition duration-500 hover:translate-x-2.5">
-                <Link href={post.slug}>
-                  {post.frontmatter.title}
-                </Link>
-              </li>
-              );
-            })
-          }
-        </ul>
-      </nav>
-    </main>
-    
+    <nav className="py-24 text-3xl leading-tight">
+      <ul className='pl-12'>
+        { // pinned
+          posts.map(post => {
+            return post.frontmatter.pinned ? (
+            <li key={post.slug} className="my-5 transition duration-500 hover:translate-x-2.5">
+              <div className='h-0 w-0 relative -left-12'>📌</div>
+              <Link href={post.slug}>
+                {post.frontmatter.title}
+              </Link>
+            </li>
+            ) : null;
+          })
+        }
+        { // unpinned
+          posts.map(post => {
+            return post.frontmatter.pinned ? null :(
+            <li key={post.slug} className="my-5 transition duration-500 hover:translate-x-2.5">
+              <Link href={post.slug}>
+                {post.frontmatter.title}
+              </Link>
+            </li>
+            );
+          })
+        }
+      </ul>
+    </nav>
   )
 }

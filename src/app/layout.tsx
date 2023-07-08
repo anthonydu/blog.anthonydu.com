@@ -1,4 +1,4 @@
-import './globals.css';
+import '@/app/globals.css';
 import { Inter } from 'next/font/google';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -13,6 +13,7 @@ export const metadata = {
   metadataBase: "https://blog.anthonydu.com",
   robots: {
     index: false,
+    follow: false,
     googleBot: {
       index: true,
       follow: true,
@@ -28,7 +29,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <header className="fixed top-0 w-full h-16 flex items-center pl-5 backdrop-blur border-b border-slate-700 text-2xl z-50">
           <Link href="/">Anthony Du&apos;s Blog</Link>
         </header>
-        {children}
+        <main className="my-16 container max-w-3xl mx-auto px-10">
+          {children}
+        </main>
+        
 
         {/* Default Statcounter code for Anthony Du's Blog https://blog.anthonydu.com */}
         <Script id="statcounter">

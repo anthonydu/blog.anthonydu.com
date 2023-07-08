@@ -15,28 +15,20 @@
 html, body {
   height: 100%;
   width: 100%;
+  overflow-x: hidden;
 }
 
-.markdown * {
-  all: revert;
+main > * {
+  animation: fadeIn 1s ease 0s 1;
 }
 
-.markdown h1 {
-  padding-bottom: 8px;
-  border-bottom: var(--slate-700) 1px solid;
-}
-
-.markdown a {
-  color: #3182ce;
-  text-decoration: none;
-}
-
-.markdown code {
-  white-space : pre-wrap;
-}
-
-.markdown pre:has(code) {
-  padding: 10px;
-  border: var(--slate-700) 1px solid;
-  border-radius: 10px;
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
