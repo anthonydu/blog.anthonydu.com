@@ -29,7 +29,7 @@ export default function Home() {
     });
 
   return (
-    <nav className="py-24 text-3xl leading-tight">
+    <nav className="py-24 text-3xl font-semibold leading-tight">
       <ul className='pl-12'>
         { // pinned
           posts.map(post => {
