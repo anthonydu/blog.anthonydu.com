@@ -12,19 +12,19 @@ export async function generateMetadata({ params }: { params: { slug: string }}) 
   const { data: frontmatter } = matter(data);
   
   return {
-    title: frontmatter.title + " | Anthony Du's Blog",
+    title: frontmatter.title,
     description: frontmatter.description,
     authors: { name: frontmatter.author },
     openGraph: {
       title: frontmatter.title,
       description: frontmatter.description,
-      url: "https://blog.anthonydu.com/" + params.slug,
+      url: params.slug,
       siteName: "Anthony Du's Blog",
       locale: "en_US",
       type: "article",
     },
     alternatives: {
-      canonical: "https://blog.anthonydu.com/" + params.slug,
+      canonical: params.slug,
     },
   }
 }
