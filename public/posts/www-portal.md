@@ -9,7 +9,7 @@ pinned: true
 
 <br>
 
-## My Personal Website 
+## My Personal Website
 
 My personal website rewritten in TSX and Sass!
 

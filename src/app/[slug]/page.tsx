@@ -1,17 +1,21 @@
 import matter from "gray-matter";
-import ReactMarkdown from "react-markdown"; 
+import ReactMarkdown from "react-markdown";
 import { server } from "@/app/_config";
-import remarkGfm from 'remark-gfm';
-import rehypeRaw from 'rehype-raw';
+import remarkGfm from "remark-gfm";
+import rehypeRaw from "rehype-raw";
 import styles from "./styles.module.scss";
 
-export const runtime = 'edge';
+export const runtime = "edge";
 
-export async function generateMetadata({ params }: { params: { slug: string }}) {
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string };
+}) {
   const res = await fetch(server + "/posts/" + params.slug + ".md");
   const data = await Promise.resolve(res.text());
   const { data: frontmatter } = matter(data);
-  
+
   return {
     title: frontmatter.title,
     description: frontmatter.description,
@@ -27,15 +31,21 @@ export async function generateMetadata({ params }: { params: { slug: string }}) 
     alternatives: {
       canonical: params.slug,
     },
-  }
+  };
 }
 
-export default async function Page({ params }: { params: { slug: string }}) {
+export default async function Page({ params }: { params: { slug: string } }) {
   const res = await fetch(server + "/posts/" + params.slug + ".md");
   const data = await Promise.resolve(res.text());
   const { content: markdownBody } = matter(data);
 
   return (
-    <ReactMarkdown className={styles.markdown + " py-8"} remarkPlugins={[ remarkGfm ]} rehypePlugins={[ rehypeRaw ]}>{markdownBody}</ReactMarkdown>
-  )
+    <ReactMarkdown
+      className={styles.markdown + " py-8"}
+      remarkPlugins={[remarkGfm]}
+      rehypePlugins={[rehypeRaw]}
+    >
+      {markdownBody}
+    </ReactMarkdown>
+  );
 }

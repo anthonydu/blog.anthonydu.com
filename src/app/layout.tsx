@@ -1,9 +1,6 @@
-import '@/app/globals.scss';
-import { Inter } from 'next/font/google';
-import Link from 'next/link';
-import Script from 'next/script';
-
-const inter = Inter({ subsets: ['latin'] });
+import "@/app/globals.scss";
+import Link from "next/link";
+import Script from "next/script";
 
 export const metadata = {
   title: {
@@ -20,19 +17,22 @@ export const metadata = {
       noarchive: true,
     },
   },
-}
+};
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en">
-      <body className={inter.className + " bg-slate-800 text-slate-200"}>
+      <body className={"bg-slate-800 text-slate-200 font-sans"}>
         <header className="fixed top-0 w-full h-16 flex items-center pl-5 backdrop-blur border-b border-slate-700 text-2xl z-50">
           <Link href="/">Anthony Du&apos;s Blog</Link>
         </header>
         <main className="my-16 container max-w-3xl mx-auto px-10">
           {children}
         </main>
-        
 
         {/* Default Statcounter code for Anthony Du's Blog https://blog.anthonydu.com */}
         <Script id="statcounter">
@@ -42,7 +42,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             var sc_security="a85b9a10"; 
           `}
         </Script>
-        <Script src="https://www.statcounter.com/counter/counter.js" async></Script>
+        <Script
+          src="https://www.statcounter.com/counter/counter.js"
+          async
+        ></Script>
         {/* End of Statcounter Code */}
 
         {/* Hotjar Tracking Code for https://blog.anthonydu.com */}
@@ -59,9 +62,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           `}
         </Script>
 
-        <Script async data-id="101416538" src="//static.getclicky.com/js"></Script>
-        <Script data-goatcounter="https://anthonydu.goatcounter.com/count" async src="//gc.zgo.at/count.js"></Script>
+        <Script
+          async
+          data-id="101416538"
+          src="//static.getclicky.com/js"
+        ></Script>
+        <Script
+          data-goatcounter="https://anthonydu.goatcounter.com/count"
+          async
+          src="//gc.zgo.at/count.js"
+        ></Script>
       </body>
     </html>
-  )
+  );
 }

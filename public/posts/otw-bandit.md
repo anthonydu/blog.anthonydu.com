@@ -1,6 +1,6 @@
 ---
 title: |
-    My Solutions to OverTheWire: Bandit
+  My Solutions to OverTheWire: Bandit
 author: Anthony Du
 description: "My Solutions to OverTheWire: Bandit"
 date: "2023-07-08"
@@ -10,19 +10,19 @@ date: "2023-07-08"
 
 This (ongoing) post contains my solutions to the online wargame &mdash; [OverTheWire: Bandit](https://overthewire.org/wargames/bandit/).
 
-This post is actually my original motive to creating this blog, [blog.anthonydu.com](https://blog.anthonydu.com). I wanted to show off, or at least keep a record, of my solutions to this very interesting game. 
+This post is actually my original motive to creating this blog, [blog.anthonydu.com](https://blog.anthonydu.com). I wanted to show off, or at least keep a record, of my solutions to this very interesting game.
 
-I played this game while taking the free online course Computing Fundamentals on [Roppers Academy](https://www.roppers.org). I took this course as a prerequisite to its Capture the Flag Bootcamp. 
+I played this game while taking the free online course Computing Fundamentals on [Roppers Academy](https://www.roppers.org). I took this course as a prerequisite to its Capture the Flag Bootcamp.
 
-I ran this game in the built-in terminal app on Fedora Workstation 38 (aarch64) on VMware Fusion. 
+I ran this game in the built-in terminal app on Fedora Workstation 38 (aarch64) on VMware Fusion.
 
 ## Tips
 
-- The command `exit` can be used to log out of and close the SSH connection. 
+- The command `exit` can be used to log out of and close the SSH connection.
 
-- Sometimes, running `[command] --help` instead of `man [command]` offers a more condensed version of the manual for a command. 
+- Sometimes, running `[command] --help` instead of `man [command]` offers a more condensed version of the manual for a command.
 
-## Solutions 
+## Solutions
 
 ### Level 0
 
@@ -30,7 +30,7 @@ I ran this game in the built-in terminal app on Fedora Workstation 38 (aarch64) 
 $ ssh bandit.labs.overthewire.org -p 2220 -l bandit0
 ```
 
-Then enter the password: `bandit0`. 
+Then enter the password: `bandit0`.
 
 ### Level 0 &rarr; Level 1
 
@@ -38,7 +38,7 @@ Then enter the password: `bandit0`.
 $ cat readme
 ```
 
-### Level 1 &rarr; Level 2 
+### Level 1 &rarr; Level 2
 
 ```
 $ cat ./-
@@ -59,7 +59,7 @@ $ cat 'spaces in this filename'
 $ ls -a inhere
 ```
 
-Then use `cat` to read the hidden file. 
+Then use `cat` to read the hidden file.
 
 ### Level 4 &rarr; Level 5
 
@@ -67,7 +67,7 @@ Then use `cat` to read the hidden file.
 $ file inhere/*
 ```
 
-Then use `cat` to read the only file with ASCII text. 
+Then use `cat` to read the only file with ASCII text.
 
 ### Level 5 &rarr; Level 6
 

@@ -11,9 +11,9 @@ The first post on my very own personal blog site!
 
 This website was bootstrapped with create-next-app with the TypeScript template. There are a lot of changes that came with version 13 of Next.js, so it took me a while to figure every new thing out since there aren't enough resources online yet. Although big changes in technologies are always hard, from what I have seen so far of Next.js 13, I think they are definitely heading in the right direction. I have to say, new App Router is somewhat more easier to use than what came with the older versions. I'm sure if they flesh things out it would be even better.
 
-Gray-matter and react-markdown was used to parse and render markdown files stored at public/posts. 
+Gray-matter and react-markdown was used to parse and render markdown files stored at public/posts.
 
-Markdown files are used because it is widely used and very easy to edit. I have no idea if this is a common practice for blog websites, but I'm pretty proud of this implementation and that I actually got it to work within a day. 
+Markdown files are used because it is widely used and very easy to edit. I have no idea if this is a common practice for blog websites, but I'm pretty proud of this implementation and that I actually got it to work within a day.
 
 Each markdown file has a header that contains metadata about the post. The headers contains information such as the title of the article which is what you see in your tab bar, as well as the author, the description which is what you see on Google or when you share the article on social media, and a pinned property which specifies if the article should be pinned to the top of the home page.
 
