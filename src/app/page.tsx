@@ -36,7 +36,7 @@ export default function Home() {
 
   return (
     <nav className="py-24 text-3xl font-semibold leading-tight">
-      <ul className="pl-12">
+      <ul className="pl-10">
         {
           // pinned
           posts.map((post) => {
@@ -45,7 +45,7 @@ export default function Home() {
                 key={post.slug}
                 className="my-5 transition duration-500 hover:translate-x-2.5"
               >
-                <div className="h-0 w-0 relative -left-12">📌</div>
+                <div className="h-0 w-0 relative -left-10">📌</div>
                 <Link href={post.slug}>{post.frontmatter.title}</Link>
               </li>
             ) : null;

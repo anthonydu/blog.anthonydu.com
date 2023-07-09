@@ -30,7 +30,7 @@ export default function RootLayout({
         <header className="fixed top-0 w-full h-16 flex items-center pl-5 backdrop-blur border-b border-slate-700 text-2xl z-50">
           <Link href="/">Anthony Du&apos;s Blog</Link>
         </header>
-        <main className="my-16 container max-w-3xl mx-auto px-10">
+        <main className="my-16 container max-w-3xl mx-auto px-6">
           {children}
         </main>
 
