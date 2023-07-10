@@ -21,17 +21,22 @@ export const metadata = {
 export default function Home() {
   const posts = fs
     .readdirSync("public/posts")
-    .sort((a, b) => {
-      return (
-        fs.statSync(`public/posts/${b}`).mtime.getTime() -
-        fs.statSync(`public/posts/${a}`).mtime.getTime()
-      );
-    })
     .map((post) => {
       const slug = post.replace(".md", "");
       const content = fs.readFileSync(`public/posts/${post}`, "utf8");
       const { data: frontmatter } = matter(content);
       return { slug, frontmatter };
+    })
+    .sort((a, b) => {
+      const pinned =
+        (b.frontmatter.pinned === true ? 1 : 0) -
+        (a.frontmatter.pinned === true ? 1 : 0);
+      const date = Math.sign(
+        (Date.parse(b.frontmatter.date) || 0) -
+          (Date.parse(a.frontmatter.date) || 0),
+      );
+
+      return pinned * 2 + date;
     });
 
   return (
@@ -40,25 +45,14 @@ export default function Home() {
         {
           // pinned
           posts.map((post) => {
-            return post.frontmatter.pinned ? (
+            return (
               <li
                 key={post.slug}
                 className="my-5 transition duration-500 hover:translate-x-2.5"
               >
-                <div className="h-0 w-0 relative -left-10">📌</div>
-                <Link href={post.slug}>{post.frontmatter.title}</Link>
-              </li>
-            ) : null;
-          })
-        }
-        {
-          // unpinned
-          posts.map((post) => {
-            return post.frontmatter.pinned ? null : (
-              <li
-                key={post.slug}
-                className="my-5 transition duration-500 hover:translate-x-2.5"
-              >
+                {post.frontmatter.pinned ? (
+                  <div className="h-0 w-0 relative -left-10">📌</div>
+                ) : null}
                 <Link href={post.slug}>{post.frontmatter.title}</Link>
               </li>
             );

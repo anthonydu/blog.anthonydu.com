@@ -1,6 +1,7 @@
 ---
 title: Portal to My Other Websites!
 author: Anthony Du
+description: "Links to some of the other websites and online project that I've worked on."
 date: "2023-07-01"
 pinned: true
 ---
