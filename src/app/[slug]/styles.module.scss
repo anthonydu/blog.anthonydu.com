@@ -14,7 +14,7 @@
       color: theme("colors.blue.300");
     }
   }
-  code {
+  code:not(pre code) {
     padding: 2px 4px;
     border-radius: 4px;
     background-color: theme("colors.slate.900");
@@ -24,11 +24,7 @@
     border-radius: 8px;
     background-color: theme("colors.slate.900");
     overflow-y: auto;
-    code {
-      padding: unset;
-      border-radius: unset;
-      background-color: unset;
-    }
+
     &::-webkit-scrollbar {
       background-color: transparent;
       height: 16px;

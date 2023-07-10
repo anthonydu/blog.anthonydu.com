@@ -10,7 +10,9 @@ export async function generateMetadata({
 }: {
   params: { slug: string };
 }) {
-  const res = await fetch(process.env.BASE_URL + "/posts/" + params.slug + ".md");
+  const res = await fetch(
+    process.env.BASE_URL + "/posts/" + params.slug + ".md",
+  );
   const data = await Promise.resolve(res.text());
   const { data: frontmatter } = matter(data);
 
@@ -33,7 +35,9 @@ export async function generateMetadata({
 }
 
 export default async function Page({ params }: { params: { slug: string } }) {
-  const res = await fetch(process.env.BASE_URL + "/posts/" + params.slug + ".md");
+  const res = await fetch(
+    process.env.BASE_URL + "/posts/" + params.slug + ".md",
+  );
   const data = await Promise.resolve(res.text());
   const { content: markdownBody } = matter(data);
 
