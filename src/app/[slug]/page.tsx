@@ -1,8 +1,6 @@
 import matter from "gray-matter";
 import ReactMarkdown from "react-markdown";
-import { server } from "@/app/_config";
 import remarkGfm from "remark-gfm";
-import rehypeRaw from "rehype-raw";
 import styles from "./styles.module.scss";
 
 export const runtime = "edge";
@@ -12,7 +10,7 @@ export async function generateMetadata({
 }: {
   params: { slug: string };
 }) {
-  const res = await fetch(server + "/posts/" + params.slug + ".md");
+  const res = await fetch(process.env.BASE_URL + "/posts/" + params.slug + ".md");
   const data = await Promise.resolve(res.text());
   const { data: frontmatter } = matter(data);
 
@@ -35,7 +33,7 @@ export async function generateMetadata({
 }
 
 export default async function Page({ params }: { params: { slug: string } }) {
-  const res = await fetch(server + "/posts/" + params.slug + ".md");
+  const res = await fetch(process.env.BASE_URL + "/posts/" + params.slug + ".md");
   const data = await Promise.resolve(res.text());
   const { content: markdownBody } = matter(data);
 
@@ -43,7 +41,6 @@ export default async function Page({ params }: { params: { slug: string } }) {
     <ReactMarkdown
       className={styles.markdown + " py-8"}
       remarkPlugins={[remarkGfm]}
-      rehypePlugins={[rehypeRaw]}
     >
       {markdownBody}
     </ReactMarkdown>

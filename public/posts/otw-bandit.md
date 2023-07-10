@@ -26,7 +26,7 @@ I ran this game in the built-in terminal app on Fedora Workstation 38 (aarch64) 
 
 ### Level 0
 
-```
+```shell
 $ ssh bandit.labs.overthewire.org -p 2220 -l bandit0
 ```
 
@@ -34,20 +34,20 @@ Then enter the password: `bandit0`.
 
 ### Level 0 &rarr; Level 1
 
-```
+```shell
 $ cat readme
 ```
 
 ### Level 1 &rarr; Level 2
 
-```
+```shell
 $ cat ./-
 $ cat < -
 ```
 
 ### Level 2 &rarr; Level 3
 
-```
+```shell
 $ cat spaces\ in\ this\ filename
 $ cat "spaces in this filename"
 $ cat 'spaces in this filename'
@@ -55,7 +55,7 @@ $ cat 'spaces in this filename'
 
 ### Level 3 &rarr; Level 4
 
-```
+```shell
 $ ls -a inhere
 ```
 
@@ -63,7 +63,7 @@ Then use `cat` to read the hidden file.
 
 ### Level 4 &rarr; Level 5
 
-```
+```shell
 $ file inhere/*
 ```
 
@@ -71,7 +71,7 @@ Then use `cat` to read the only file with ASCII text.
 
 ### Level 5 &rarr; Level 6
 
-```
+```shell
 $ find inhere -type f -size 1033c
 ```
 
@@ -79,7 +79,7 @@ Then use `cat` to read the only file that was found.
 
 ### Level 6 &rarr; Level 7
 
-```
+```shell
 $ find / -type f -user bandit7 -group bandit6 -size 33c 2> /dev/null
 ```
 
@@ -89,37 +89,37 @@ Then use `cat` to read the only file that was found.
 
 ### Level 7 &rarr; Level 8
 
-```
+```shell
 $ grep millionth data.txt
 ```
 
 ### Level 8 &rarr; Level 9
 
-```
+```shell
 $ cat data.txt | sort | uniq -u
 ```
 
 ### Level 9 &rarr; Level 10
 
-```
+```shell
 $ grep -Eao "=+ [[:alnum:]]+" data.txt
 ```
 
 ### Level 10 &rarr; Level 11
 
-```
+```shell
 $ base64 -d data.txt
 ```
 
 ### Level 11 &rarr; Level 12
 
-```
+```shell
 $ cat data.txt | tr A-Za-z N-ZA-Mn-za-m
 ```
 
 ### Level 12 &rarr; Level 13
 
-```
+```shell
 $ mkdir /tmp/myname123
 $ cp data.txt /tmp/myname123/data.txt
 $ cd /tmp/myname123

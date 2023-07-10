@@ -11,3 +11,5 @@ Disallow: /
 
 User-agent: Googlebot
 Allow: /
+
+Sitemap: https://blog.anthonydu.com/sitemap.xml

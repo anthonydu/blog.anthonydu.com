@@ -7,15 +7,11 @@ pinned: true
 
 # Portal to My Other Websites!
 
-<br>
-
 ## My Personal Website
 
 My personal website rewritten in TSX and Sass!
 
 ### [www.anthonydu.com](https://www.anthonydu.com)
-
-<br>
 
 ## My Github Profile
 
