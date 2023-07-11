@@ -26,11 +26,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={"bg-slate-800 text-slate-200 font-sans"}>
-        <header className="fixed top-0 w-full h-16 flex items-center pl-5 backdrop-blur border-b border-slate-700 text-2xl z-50">
+      <body className={"bg-slate-800 font-sans text-slate-200"}>
+        <header className="fixed top-0 z-50 flex h-16 w-full items-center border-b border-slate-700 pl-5 text-2xl backdrop-blur">
           <Link href="/">Anthony Du&apos;s Blog</Link>
         </header>
-        <main className="my-16 container max-w-3xl mx-auto px-6">
+        <main className="container mx-auto my-16 max-w-3xl px-6">
           {children}
         </main>
 

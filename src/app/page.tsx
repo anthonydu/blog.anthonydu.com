@@ -51,7 +51,7 @@ export default function Home() {
                 className="my-5 transition duration-500 hover:translate-x-2.5"
               >
                 {post.frontmatter.pinned ? (
-                  <div className="h-0 w-0 relative -left-10">📌</div>
+                  <div className="relative -left-10 h-0 w-0">📌</div>
                 ) : null}
                 <Link href={post.slug}>{post.frontmatter.title}</Link>
               </li>
