@@ -1,13 +1,15 @@
 import "@/app/globals.scss";
+import { Metadata } from "next";
 import Link from "next/link";
 import Script from "next/script";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: {
     template: "%s | Anthony Du's Blog",
+    default: "Anthony Du's Blog",
   },
   themeColor: "#1E293B",
-  metadataBase: "https://blog.anthonydu.com",
+  metadataBase: new URL("https://blog.anthonydu.com"),
   robots: {
     index: false,
     follow: false,

@@ -2,7 +2,7 @@
 title: |
   My Solutions to OverTheWire: Bandit
 author: Anthony Du
-description: "My Solutions to all levels of the online wargame &mdash; OverTheWire: Bandit."
+description: "My solutions to all levels of the online wargame &mdash; OverTheWire: Bandit."
 date: "2023-07-08"
 ---
 
@@ -162,3 +162,20 @@ $ file data9
 data9: ASCII text
 $ cat data9
 ```
+
+### Level 13 &rarr; Level 14
+
+```shell
+$ ls
+sshkey.private
+$ ssh bandit14@localhost -p 2220 -i sshkey.private
+```
+
+### Level 14 &rarr; Level 15
+
+```shell
+$ cat /etc/bandit_pass/bandit14
+$ nc localhost 30000
+```
+
+You wouldn't get any output from running the last command, but pasting in the password and hitting enter should reveal the password for the next level.

@@ -1,8 +1,9 @@
 import fs from "fs";
 import matter from "gray-matter";
+import { Metadata } from "next";
 import Link from "next/link";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Home | Anthony Du's Blog",
   description: "A blog about Anthony Du's life and thoughts.",
   openGraph: {
@@ -13,7 +14,7 @@ export const metadata = {
     locale: "en_US",
     type: "website",
   },
-  alternatives: {
+  alternates: {
     canonical: "/",
   },
 };

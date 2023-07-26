@@ -2,6 +2,7 @@ import matter from "gray-matter";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import styles from "./styles.module.scss";
+import { Metadata } from "next";
 
 export const runtime = "edge";
 
@@ -9,7 +10,7 @@ export async function generateMetadata({
   params,
 }: {
   params: { slug: string };
-}) {
+}): Promise<Metadata> {
   const res = await fetch(
     process.env.BASE_URL + "/posts/" + params.slug + ".md",
   );
@@ -28,7 +29,7 @@ export async function generateMetadata({
       locale: "en_US",
       type: "article",
     },
-    alternatives: {
+    alternates: {
       canonical: params.slug,
     },
   };
