@@ -12,10 +12,16 @@ pinned: true
 
 My personal website rewritten in TSX and Sass!
 
-### [www.anthonydu.com](https://www.anthonydu.com)
+**[www.anthonydu.com](https://www.anthonydu.com)**
 
 ## My Github Profile
 
-Take a look at some projects that I'm working on!
+Take a look at some other projects that I'm working on!
 
-### [github.com/anthonydu](https://github.com/anthonydu)
+**[github.com/anthonydu](https://github.com/anthonydu)**
+
+## An r/place Clone
+
+A full-stack realtime r/place clone with live chat built using Next.js, Supabase, and PostgreSQL.
+
+**[github.com/anthonydu](https://place.anthonydu.com)**
