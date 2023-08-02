@@ -43,7 +43,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
   const text = await Promise.resolve(res.text());
   const { data: frontmatter, content: markdownBody } = matter(text);
   const lastModified = await fetch(
-    `https://api.github.com/repos/anthonydu/blog.anthonydu.com/contents/public/posts/${params.slug}.md`,
+    `https://api.github.com/repos/anthonydu/blog.anthonydu.com/commits?path=public/posts/${params.slug}.md`,
   ).then((res) => {
     return res.headers.get("Last-Modified");
   });
