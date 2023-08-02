@@ -43,22 +43,24 @@ export default function Home() {
   return (
     <nav className="py-24 text-3xl font-semibold leading-tight">
       <ul className="pl-10">
-        {
-          // pinned
-          posts.map((post) => {
-            return (
-              <li
-                key={post.slug}
-                className="my-5 transition duration-500 hover:translate-x-2.5"
-              >
-                {post.frontmatter.pinned ? (
-                  <div className="relative -left-10 h-0 w-0">📌</div>
-                ) : null}
-                <Link href={post.slug}>{post.frontmatter.title}</Link>
-              </li>
-            );
-          })
-        }
+        {posts.map((post) => {
+          return (
+            <li
+              key={post.slug}
+              className="my-5 transition duration-500 hover:translate-x-2.5"
+            >
+              {post.frontmatter.pinned ? (
+                <div className="relative -left-10 h-0 w-0">📌</div>
+              ) : null}
+              <Link className="pr-2" href={post.slug}>
+                {post.frontmatter.title}
+              </Link>
+              <p className="mt-1 whitespace-nowrap text-sm text-slate-500">
+                {post.frontmatter.datePublished}
+              </p>
+            </li>
+          );
+        })}
       </ul>
     </nav>
   );

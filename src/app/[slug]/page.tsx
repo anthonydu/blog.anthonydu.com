@@ -3,6 +3,7 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import styles from "./styles.module.scss";
 import { Metadata } from "next";
+import TimeAgo from "./components/TimeAgo";
 
 export const runtime = "edge";
 
@@ -39,15 +40,25 @@ export default async function Page({ params }: { params: { slug: string } }) {
   const res = await fetch(
     process.env.BASE_URL + "/posts/" + params.slug + ".md",
   );
-  const data = await Promise.resolve(res.text());
-  const { content: markdownBody } = matter(data);
+  const text = await Promise.resolve(res.text());
+  const { data: frontmatter, content: markdownBody } = matter(text);
 
   return (
-    <ReactMarkdown
-      className={styles.markdown + " py-8"}
-      remarkPlugins={[remarkGfm]}
-    >
-      {markdownBody}
-    </ReactMarkdown>
+    <div className="py-14">
+      <div className="mb-8">
+        <h1 className="text-3xl font-semibold leading-10">
+          {frontmatter.title}
+        </h1>
+        <hr className="my-2 border-[0.5px] border-slate-700" />
+        <p className="text-xs">
+          By <strong>{frontmatter.author}</strong> &middot; Published on{" "}
+          {new Date(frontmatter.datePublished).toDateString()} &middot; Updated{" "}
+          <TimeAgo date={res.headers.get("Last-Modified")!}></TimeAgo>
+        </p>
+      </div>
+      <ReactMarkdown className={styles.markdown} remarkPlugins={[remarkGfm]}>
+        {markdownBody}
+      </ReactMarkdown>
+    </div>
   );
 }

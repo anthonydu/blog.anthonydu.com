@@ -2,10 +2,8 @@
 title: The Technology Behind This Blog Site and Some Thoughts
 author: Anthony Du
 description: "A deep dive into the technologies used to create blog.anthonydu.com and my thoughts on them."
-date: "2023-07-01"
+datePublished: "2023-07-01"
 ---
-
-# The Technology Behind This Blog Site and Some Thoughts
 
 The first post on my very own personal blog site!
 

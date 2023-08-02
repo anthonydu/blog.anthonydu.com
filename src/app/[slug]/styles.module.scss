@@ -2,9 +2,13 @@
   * {
     all: revert;
   }
-  h1 {
-    padding-bottom: 8px;
-    border-bottom: theme("colors.slate.700") 1px solid;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: 500;
   }
   a {
     color: theme("colors.blue.400");

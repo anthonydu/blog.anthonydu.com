@@ -3,10 +3,8 @@ title: |
   My Solutions to OverTheWire: Bandit
 author: Anthony Du
 description: "My solutions to all levels of the online wargame &mdash; OverTheWire: Bandit."
-date: "2023-07-08"
+datePublished: "2023-07-08"
 ---
-
-# My Solutions to OverTheWire: Bandit
 
 This (ongoing) post contains my solutions to the online wargame &mdash; [OverTheWire: Bandit](https://overthewire.org/wargames/bandit/).
 
