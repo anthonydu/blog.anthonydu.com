@@ -14,7 +14,7 @@ My personal website rewritten in TSX and Sass!
 
 ## An r/place Clone
 
-**[github.com/anthonydu](https://place.anthonydu.com)**
+**[place.anthonydu.com](https://place.anthonydu.com)**
 
 A full-stack realtime r/place clone with live chat built using Next.js, Supabase, and PostgreSQL.
 

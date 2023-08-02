@@ -42,6 +42,11 @@ export default async function Page({ params }: { params: { slug: string } }) {
   );
   const text = await Promise.resolve(res.text());
   const { data: frontmatter, content: markdownBody } = matter(text);
+  const lastModified = await fetch(
+    `https://api.github.com/repos/anthonydu/blog.anthonydu.com/contents/public/posts/${params.slug}.md`,
+  ).then((res) => {
+    return res.headers.get("Last-Modified");
+  });
 
   return (
     <div className="py-14">
@@ -53,7 +58,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
         <p className="text-xs">
           By <strong>{frontmatter.author}</strong> &middot; Published on{" "}
           {new Date(frontmatter.datePublished).toDateString()} &middot; Updated{" "}
-          <TimeAgo date={res.headers.get("Last-Modified")!}></TimeAgo>
+          <TimeAgo date={lastModified!}></TimeAgo>
         </p>
       </div>
       <ReactMarkdown className={styles.markdown} remarkPlugins={[remarkGfm]}>
