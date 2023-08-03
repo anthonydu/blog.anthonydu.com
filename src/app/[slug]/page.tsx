@@ -56,9 +56,20 @@ export default async function Page({ params }: { params: { slug: string } }) {
         </h1>
         <hr className="my-2 border-[0.5px] border-slate-700" />
         <p className="text-xs">
-          By <strong>{frontmatter.author}</strong> &middot; Published on{" "}
+          By{" "}
+          <a
+            className="hover:underline"
+            href={
+              frontmatter.author === "Anthony Du"
+                ? "https://www.anthonydu.com"
+                : ""
+            }
+          >
+            <strong>{frontmatter.author}</strong>
+          </a>{" "}
+          &middot; Published on{" "}
           {new Date(frontmatter.datePublished).toDateString()} &middot; Updated{" "}
-          <TimeAgo date={lastModified!}></TimeAgo>
+          <TimeAgo date={lastModified!} suppressHydrationWarning></TimeAgo>
         </p>
       </div>
       <ReactMarkdown className={styles.markdown} remarkPlugins={[remarkGfm]}>
