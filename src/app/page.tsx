@@ -33,8 +33,8 @@ export default function Home() {
         (b.frontmatter.pinned === true ? 1 : 0) -
         (a.frontmatter.pinned === true ? 1 : 0);
       const date = Math.sign(
-        (Date.parse(b.frontmatter.date) || 0) -
-          (Date.parse(a.frontmatter.date) || 0),
+        (Date.parse(b.frontmatter.datePublished) || 0) -
+          (Date.parse(a.frontmatter.datePublished) || 0),
       );
 
       return pinned * 2 + date;
