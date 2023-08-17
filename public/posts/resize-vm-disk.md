@@ -15,7 +15,7 @@ Then, boot into the VM, and run the following commands in the CLI **based on the
 
 ```shell
 $ sudo fdisk -l # check partition table
-GPT PMBR size mismatch (PREV_SIZE != NEW_SIZE) will be corrected by write.
+<span style="color: red">GPT PMBR size mismatch (PREV_SIZE != NEW_SIZE) will be corrected by write.</span>
 
 $ sudo fdisk /dev/nvme0n1
 Command (m for help): write
