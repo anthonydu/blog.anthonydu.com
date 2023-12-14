@@ -11,13 +11,9 @@ export const metadata: Metadata = {
   themeColor: "#1E293B",
   metadataBase: new URL("https://blog.anthonydu.com"),
   robots: {
-    index: false,
     follow: false,
     noarchive: true,
     noimageindex: true,
-    googleBot: {
-      index: true,
-    },
   },
 };
 
