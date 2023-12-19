@@ -15,4 +15,4 @@ Allow: /
 User-agent: bingbot
 Allow: /
 
-Sitemap: /sitemap.xml
+Sitemap: https://blog.anthonydu.com/sitemap.xml
