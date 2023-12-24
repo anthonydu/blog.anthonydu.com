@@ -32,12 +32,12 @@ export default function RootLayout({
           {children}
         </main>
 
-        {/* Default Statcounter code for Anthony Du's Blog https://blog.anthonydu.com */}
+        {/* Default Statcounter code for anthonydu.com */}
         <Script id="statcounter">
           {`
-            var sc_project=12896567; 
+            var sc_project=12802423; 
             var sc_invisible=1; 
-            var sc_security="a85b9a10"; 
+            var sc_security="b192c111"; 
           `}
         </Script>
         <Script
@@ -62,17 +62,6 @@ export default function RootLayout({
           gtag("config", "G-0X7HCECWPX");
         `}
         </Script>
-
-        <Script
-          async
-          data-id="101416538"
-          src="//static.getclicky.com/js"
-        ></Script>
-        <Script
-          data-goatcounter="https://anthonydu.goatcounter.com/count"
-          async
-          src="//gc.zgo.at/count.js"
-        ></Script>
       </body>
     </html>
   );
